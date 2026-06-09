@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8d2d2;
+}
+h1{
+  font-family: "Cormorant Garamond", serif;
+}
+#CheckoutContainer{
+  height: 80vh;
+  width: 60vw;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+}
+#checkout1{
+    display: flex;
+    flex-basis: 15%;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+#checkout2{
+    flex-basis: 70%;
+    overflow: auto;
+}
+#checkout3{
+    display: flex;
+    flex-basis: 15%;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.342);
+}
+#checkout3>button{
+  padding: 15px 45px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(4, 71, 255, 0.783);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+}
+.product_container{
+  display: flex;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.product_container1{
+  flex-basis: 15%;
+}
+.product_container2{
+  flex-basis: 85%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+
+/* MOBILE RESPONSIVE CHECKOUT FIX */
+
+
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    padding: 10px;
+  }
+
+  body {
+    background-color: #d8d2d2;
+    height: auto;
+  }
+
+  #CheckoutContainer {
+    width: 95vw;
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  #checkout1 {
+    flex-basis: auto;
+    height: 60px;
+    padding-left: 15px;
+  }
+
+  #checkout1 > h1 {
+    font-size: 26px;
+  }
+
+  #checkout2 {
+    flex-basis: auto;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .product_container {
+    width: 90%;
+    margin: 15px auto;
+    padding: 8px;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .product_container1 {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product_container1 > img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .product_container2 {
+    flex-basis: 70%;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .product_container2 > h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .product_container2 p {
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+
+  #checkout3 {
+    flex-basis: auto;
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 10px;
+  }
+
+  #checkout3 > h2 {
+    font-size: 16px;
+  }
+
+  #checkout3 > button {
+    width: 85%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+/* VERY SMALL PHONE FIX */
+
+
+@media (max-width: 480px) {
+  #CheckoutContainer {
+    width: 97vw;
+  }
+
+  .product_container1 > img {
+    height: 100px;
+  }
+
+  .product_container2 > h2 {
+    font-size: 14px;
+  }
+
+  #checkout3 > h2 {
+    font-size: 14px;
+  }
+
+  #checkout3 > button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
